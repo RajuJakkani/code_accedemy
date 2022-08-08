@@ -1,0 +1,170 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>CODE ACCEDEMY</title>
+    <link rel="stylesheet" href="{% static 'home/nevil.css' %} ">
+    <link rel="stylesheet" href="\home\static\home\nevil.css">
+</head>
+<style>
+    .header {
+        /* position: absolute; */
+        width: 100%;
+        height: 70px;
+        left: 0px;
+        top: 0px;
+        background: #AFF2F2;
+        /* background-color:rgb(255, 0, 0); */
+    }
+
+
+    /* .left{
+    display: inline-block;
+    border: 2px solid red;
+    position: absolute;
+    left: 34px;
+    top: 20px;
+}
+.mid{
+    display: block;
+    width: 33%;
+    margin: 20px auto;
+    border: 2px solid green;
+}
+.right{
+    display: inline-block;
+    border: 2px solid red;
+    position: absolute;
+    right: 34px;
+    top: 20px;
+} */
+</style>
+
+<body>
+    <!-- <a href="/logi.html">login</a> -->
+    <header class="header" style="display: flex; justify-content: space-around; align-items: center;">
+        <div class="left">
+            <img src="{% static 'home\img\download-removebg-preview (1) 1.png' %}" alt="" id="img">
+        </div>
+        <div class="mid">
+            <div class="home"><a href="" style="text-decoration: none;">Home</a></div>
+            <div class="codes"><a href="/content" style="text-decoration: none;">Content</a></div>
+            <div class="tutorial"><a href="/videopage" style="text-decoration: none;">videopage</a></div>
+            <div class="Contact_us"><a href="/contact" style="text-decoration: none;">Contact</a></div>
+        </div>
+        {% if IS_USER_LOGGED %}
+        <div style="margin-top: 1rem;">
+            <h4>Hello {{ USER_NAME }}</h4>
+
+        </div>
+        <button id="btn" type="button" class="btn btn-primary"> <a style="color: white; text-decoration: none;"
+                href="/logout">logout</a> </button>
+
+        {% else %}
+        <div class="right">
+            <button id="btn" type="button" class="btn btn-primary"> <a style="color: white; text-decoration: none; "
+                    href="/Register">Register</a> </button>
+            <button id="btn" type="button" class="btn btn-primary"> <a style="color: white; text-decoration: none;"
+                    href="/login">Login</a> </button>
+        </div>
+        {% endif %}
+    </header>
+
+    <div class="bigbox">
+        <div class="smallbox1">
+            <img class="img" src="{% static 'home/img/Rectangle 8.png' %}" alt="">
+        </div>
+        <div class="smallbox2">
+            <h1 class="title">
+              <a href="http://127.0.0.1:8000/html_intro"> HTML</a>
+            </h1>
+            <h4 class="subtitle">
+                THE LANGUAGE WHICH IS USE TO MAKE <br>THE BODY OF THE WEBSITE.
+                AND TO STRUCTURE <br>OUR DATA.
+            </h4>
+        </div>
+    </div>
+    <div class="bigbox2">
+        <div class="smallbox1">
+            <img class="img" src="{% static 'home/img/Rectangle 9.png' %}" alt="">
+        </div>
+        <div class="smallbox2">
+            <h1 class="title">
+                <a href="http://127.0.0.1:8000/css_intro">CSS</a>
+            </h1>
+            <h4 class="subtitle">
+                THE LANGUAGE WHICH IS USE MAKE <br>THE WEBSITE LOOK BEAUTIFULL.
+                <!-- THE LANGUAGE WHICH IS USE TO MAKE <br>THE BODY OF THE WEBSITE. -->
+                <!-- AND TO STRUCTURE <br>OUR DATA. -->
+            </h4>
+        </div>
+    </div>
+    <div class="bigbox3">
+        <div class="smallbox1">
+            <img class="imag" src="{% static 'home/img/Rectangle 10.png' %}" alt="" width="890px">
+        </div>
+        <div class="smallbox2">
+            <h1 class="title">
+                JAVA SCRIPT
+            </h1>
+            <h4 class="subtitle">
+                THE LANGUAGE WHICH IS USE <br>TO GIVE THE FUNCTIONS LIKE FOR <br>SIGN IN BUTTON ETC.
+            </h4>
+        </div>
+    </div>
+    <div class="bigbox4">
+        <!-- <div class="smallbox1">
+            <img class="imag" src="img/Rectangle 10.png" alt="">
+        </div>
+        <div class="smallbox2">
+            <h1 class="title">
+                JAVA SCRIPT
+            </h1>
+            <h4 class="subtitle">
+                THE LANGUAGE WHICH IS USE <br>TO GIVE THE FUNCTIONS LIKE FOR <br>SIGN IN BUTTON ETC.
+            </h4>
+        </div> -->
+        <div class="b">
+            <div class="flex1">
+                <button class="btn1">C</button>
+                <button class="btn2">C++</button>
+            </div>
+            <!-- <div class="flex2">
+                <button class="btn2">BOOTSTRAP</button>
+                <button class="btn2">NODE jS</button>
+            </div> -->
+        </div>
+    </div>
+    <!-- <div class="bigbox5"> -->
+    <!-- <div class="smallbox1">
+            <img class="imag" src="img/Rectangle 10.png" alt="">
+        </div>
+        <div class="smallbox2">
+            <h1 class="title">
+                JAVA SCRIPT
+            </h1>
+            <h4 class="subtitle">
+                THE LANGUAGE WHICH IS USE <br>TO GIVE THE FUNCTIONS LIKE FOR <br>SIGN IN BUTTON ETC.
+            </h4>
+        </div>
+        <div class="b">
+            <button class="btn1">MONGO DB</button>
+            <button class="btn2">REACT</button>
+            <button class="btn3">JAVA</button>
+            <button class="btn4">SQL</button>
+        </div> -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
